@@ -100,10 +100,10 @@ class Api {
 
 //Настройки для подключения к серверу
 export const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-63',
-  headers: {
-    authorization: '84af6c44-a585-423c-871f-7db63185d3ce',
-    'Content-Type': 'application/json'
-  }
+  baseUrl: 'https://mesto.arteva.nomoredomains.xyz',
+  //headers: {
+    //authorization: '84af6c44-a585-423c-871f-7db63185d3ce',
+    //'Content-Type': 'application/json'
+  //}
 });
 
