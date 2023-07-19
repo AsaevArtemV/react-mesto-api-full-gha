@@ -102,7 +102,7 @@ class Api {
 export const api = new Api({
   baseUrl: 'https://mesto.arteva.nomoredomains.xyz',
   headers: {
-    authorization: `Bearer ${localStorage.getItem('TOKEN')}`,
+    authorization: `Bearer ${localStorage.getItem('JWT')}`,
     'Content-Type': 'application/json'
   }
 });
