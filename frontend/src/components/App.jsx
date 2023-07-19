@@ -169,10 +169,10 @@ function App() {
 
   // Авторизация
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
+    const JWT = localStorage.getItem("JWT");
+    if (JWT) {
       auth
-        .checkToken(token)
+        .checkToken(JWT)
         .then((res) => {
           setEmail(res.data.email);
           setIsLoggedIn(true);
@@ -186,7 +186,7 @@ function App() {
     auth
       .authorize(inputs)
       .then(res => {
-        if (res.token) localStorage.setItem('token', res.token);
+        if (res.JWT) localStorage.setItem('JWT', res.JWT);
         setIsLoggedIn(true);
         navigate("/");
       })
@@ -200,7 +200,7 @@ function App() {
   }
 
   function handleLogout() {
-    localStorage.removeItem("token");
+    localStorage.removeItem("JWT");
     setIsLoggedIn(false);
   }
 

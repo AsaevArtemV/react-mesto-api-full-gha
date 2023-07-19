@@ -25,12 +25,12 @@ class Auth {
       }).then(this._checkResponse);
     }
   
-    checkToken(token) {
+    checkToken(JWT) {
       return fetch(`${this._baseUrl}/users/me`, {
         method: 'GET',
         headers: {
           ...this._headers,
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${JWT}`
         }
       }).then(this._checkResponse)
     }
