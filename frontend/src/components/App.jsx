@@ -186,8 +186,7 @@ function App() {
     auth
       .authorize(inputs)
       .then(res => {
-        console.log(res);
-        if (res) localStorage.setItem('JWT', res);
+        if (res.jwt) localStorage.setItem('JWT', res.jwt);
         setIsLoggedIn(true);
         navigate("/");
       })
