@@ -29,7 +29,7 @@ function Register({ onRegister }) {
   return (
     <>
       <Header>
-        <Link to="/sign-in" className="header__menu-item">
+        <Link to="/signin" className="header__menu-item">
           Войти
         </Link>
       </Header>
@@ -66,7 +66,7 @@ function Register({ onRegister }) {
           </form>
           <p className="login__question-text">
             Уже зарегистрированы?{" "}
-            <Link className="login__link" to="/sign-in">
+            <Link className="login__link" to="/signin">
               Войти
             </Link>
           </p>

@@ -29,7 +29,7 @@ function Login({ onLogin }) {
   return (
     <>
       <Header>
-        <Link to="/sign-up" className="header__menu-item">
+        <Link to="/signup" className="header__menu-item">
           Регистрация
         </Link>
       </Header>

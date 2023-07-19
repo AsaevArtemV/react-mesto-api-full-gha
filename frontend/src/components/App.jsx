@@ -212,7 +212,7 @@ function App() {
           text: "Вы успешно зарегистрировались!",
           isSuccess: true,
         });
-        navigate("/sign-in");
+        navigate("/signin");
       })
       .catch((err) => {
         const text = err.message || "Что-то пошло не так! Попробуйте ещё раз.";
@@ -248,7 +248,7 @@ function App() {
               }
             />
             <Route
-              path="/sign-up"
+              path="/signup"
               element={
                 <Register 
                   handleShowInfoMessage={handleShowInfoMessage}
@@ -257,7 +257,7 @@ function App() {
                 }
             />
             <Route
-              path="/sign-in"
+              path="/signin"
               element={
                 <Login
                   handleShowInfoMessage={handleShowInfoMessage}
@@ -268,7 +268,7 @@ function App() {
             <Route
               path="*"
               element={
-                isLoggedIn ? <Navigate to="/" /> : <Navigate to="/sign-in" />
+                isLoggedIn ? <Navigate to="/" /> : <Navigate to="/signin" />
               }
             />
           </Routes>
