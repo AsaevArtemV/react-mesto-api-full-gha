@@ -101,9 +101,8 @@ class Api {
 //Настройки для подключения к серверу
 export const api = new Api({
   baseUrl: 'https://mesto.arteva.nomoredomains.xyz',
-  //headers: {
-    //authorization: '84af6c44-a585-423c-871f-7db63185d3ce',
-    //'Content-Type': 'application/json'
-  //}
+  headers: {
+    authorization: `Bearer ${localStorage.getItem('TOKEN')}`,
+    'Content-Type': 'application/json'
+  }
 });
-
