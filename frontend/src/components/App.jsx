@@ -147,9 +147,9 @@ function App() {
       .catch(console.error);
   }
 
-  function handleUpdateAvatar(data) {
+  function handleUpdateAvatar(avatar) {
     api
-      .setUserAvatar({link: data.avatar})
+      .setUserAvatar(avatar)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
