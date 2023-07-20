@@ -174,7 +174,7 @@ function App() {
       auth
         .checkToken(JWT)
         .then((res) => {
-          setEmail(res.data.email);
+          setEmail(res.email);
           setIsLoggedIn(true);
           navigate("/");
         })
