@@ -108,7 +108,7 @@ class Api {
       }
   
     //avatar update avatar
-    async setUserAvatar(data) {
+    async setUserAvatar({ link }) {
       const response = await fetch(`${this._baseUrl}/users/me/avatar`, {
         method: "PATCH",
         headers: {
@@ -116,7 +116,7 @@ class Api {
             'Content-Type': 'application/json'
           },
         body: JSON.stringify({
-          avatar: data.avatar,
+          avatar: link,
         }),
       });
       return this._checkResponse(response);
