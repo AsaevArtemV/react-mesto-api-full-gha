@@ -16,7 +16,7 @@ function Card({
   const currentUser = useContext(CurrentUserContext);
 
   // Определяем, являемся ли мы владельцем текущей карточки
-  const isOwn = owner._id === currentUser._id;
+  const isOwn = owner === currentUser._id;
 
   // Определяем, есть ли у карточки лайк, поставленный текущим пользователем
   const isLiked = likes.some((i) => i === currentUser._id);
