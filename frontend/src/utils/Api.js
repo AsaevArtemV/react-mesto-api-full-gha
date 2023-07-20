@@ -124,8 +124,6 @@ class Api {
   }
   
   //connect api
-  const api = new Api({
+  export const api = new Api({
     baseUrl: "https://mesto.arteva.nomoredomains.xyz",
   });
-  
-  export default api;
