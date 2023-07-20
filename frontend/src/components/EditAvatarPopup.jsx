@@ -14,7 +14,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
     e.preventDefault();
     // Передаём значения управляемых компонентов во внешний обработчик
     onUpdateAvatar({ 
-        avatar: avatarRef.current.value 
+        avatar: avatarRef.current.value
     });
   }
 
