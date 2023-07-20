@@ -176,7 +176,7 @@ function App() {
         .then((res) => {
           setEmail(res.email);
           setIsLoggedIn(true);
-          //navigate("/");
+          navigate("/", {replace: true});
         })
         .catch(console.error);
     }
