@@ -29,11 +29,11 @@ mongoose.connect(DB_URL, {
 
 app.use(helmet());
 
+app.use(requestLogger); // подключаем логгер запросов
+
 app.use(limiter);
 
 app.use(express.json());
-
-app.use(requestLogger); // подключаем логгер запросов
 
 app.use(cors({ origin: true, credentials: true }));
 
