@@ -1,6 +1,5 @@
 const mangoose = require('mongoose');
 const { Schema } = require('mongoose');
-const validator = require('validator');
 
 const cardSchema = new Schema({
   name: {
@@ -12,10 +11,6 @@ const cardSchema = new Schema({
   link: {
     type: String,
     required: [true, 'Поле "link" должно быть заполнено'],
-    validate: {
-      validator: validator.link,
-      message: 'Неправильный формат ссылки',
-    },
   },
   owner: {
     type: Schema.Types.ObjectId,

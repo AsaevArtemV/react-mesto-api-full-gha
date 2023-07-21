@@ -7,7 +7,7 @@ const {
 } = require('../errors/errors');
 
 const getAllCards = (req, res, next) => {
-  Card.find({}).sort({ createdAt: -1 })
+  Card.find({})
     .then((cards) => res.status(200).send(cards))
     .catch((err) => {
       next(err);
@@ -51,7 +51,7 @@ const deleteCard = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'CastError') {
-        next(new BadRequestError(`Передан некорректный id: ${cardId}`));
+        next(new BadRequestError(`Карточки с указанным id: ${cardId} нет`));
       } else {
         next(err);
       }
@@ -79,7 +79,7 @@ const likeCard = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'CastError') {
-        next(new BadRequestError(`Передан некорректный id: ${cardId}`));
+        next(new BadRequestError(`Карточки с указанным id: ${cardId} нет в базе данных`));
       } else {
         next(err);
       }
@@ -107,7 +107,7 @@ const deleteLike = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'CastError') {
-        next(new BadRequestError(`Передан некорректный id: ${cardId}`));
+        next(new BadRequestError(`Карточки с указанным id: ${cardId} нет в базе данных`));
       } else {
         next(err);
       }
