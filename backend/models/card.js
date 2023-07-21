@@ -13,8 +13,8 @@ const cardSchema = new Schema({
     type: String,
     required: [true, 'Поле "link" должно быть заполнено'],
     validate: {
-      validator: validator.link,
-      message: 'Неправильный формат ссылки',
+      validator: (v) => validator.isURL(v),
+      message: 'Некорректный URL',
     },
   },
   owner: {
