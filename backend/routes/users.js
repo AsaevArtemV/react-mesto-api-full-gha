@@ -15,7 +15,7 @@ router.get(
   '/me',
   celebrate({
     params: Joi.object().keys({
-      userId: Joi.string().alphanum().length(24).hex(),
+      userId: Joi.string().length(24).hex(),
     }),
   }),
   getCurrentUser,
@@ -25,8 +25,8 @@ router.patch(
   '/me',
   celebrate({
     body: Joi.object().keys({
-      name: Joi.string().min(2).max(30),
-      about: Joi.string().min(2).max(30),
+      name: Joi.string().min(2).max(30).required(),
+      about: Joi.string().min(2).max(30).required(),
     }),
   }),
   updateUser,
@@ -36,7 +36,7 @@ router.get(
   '/:userId',
   celebrate({
     params: Joi.object().keys({
-      userId: Joi.string().alphanum().length(24).hex(),
+      userId: Joi.string().length(24).hex(),
     }),
   }),
   getUserById,
@@ -46,7 +46,7 @@ router.patch(
   '/me/avatar',
   celebrate({
     body: Joi.object().keys({
-      avatar: Joi.string().regex(validationСheck),
+      avatar: Joi.string().regex(validationСheck).required(),
     }),
   }),
   updateAvatar,
