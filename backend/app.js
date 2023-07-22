@@ -1,10 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
-require('dotenv').config();
 const routes = require('./routes');
 const handleError = require('./middlewares/handeError');
 const { NotFoundError } = require('./errors/errors');
