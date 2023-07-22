@@ -11,6 +11,7 @@ const {
 
 const SALT_ROUNDS = 10;
 const { NODE_ENV, JWT_SECRET } = process.env;
+const KEY_PASSWORD = 'somepassword';
 
 const getAllUsers = (req, res, next) => {
   User.find({})
@@ -155,7 +156,7 @@ const login = (req, res, next) => {
           }
           const token = jwt.sign(
             { _id: user._id },
-            NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+            NODE_ENV === 'production' ? JWT_SECRET : KEY_PASSWORD,
             { expiresIn: '7d' },
           );
           return res.send({ jwt: token });

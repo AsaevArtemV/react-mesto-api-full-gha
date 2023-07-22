@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const { UnauthorizedError } = require('../errors/errors');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
+const KEY_PASSWORD = 'somepassword';
 
 const auth = (req, res, next) => {
   const { authorization } = req.headers;
@@ -14,7 +15,7 @@ const auth = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
+    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : KEY_PASSWORD);
   } catch (err) {
     throw new UnauthorizedError('Необходима авторизация');
   }
