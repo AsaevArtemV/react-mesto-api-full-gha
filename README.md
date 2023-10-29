@@ -83,6 +83,8 @@ npm run dev
 
 Public IP: 51.250.73.162
 
-[Ссылка на Frontend часть проекта](https://mestoarteva.nomoredomains.xyz)
-[Ссылка на Backend часть проекта](https://mesto.arteva.nomoredomains.xyz)
-[Ссылка на макет в Figma с авторизацией](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/JavaScript.-Sprint-12?type=design&node-id=0-1&mode=design)
+* [Ссылка на Frontend часть проекта](https://mestoarteva.nomoredomains.xyz)
+
+* [Ссылка на Backend часть проекта](https://mesto.arteva.nomoredomains.xyz)
+
+* [Ссылка на макет в Figma с авторизацией](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/JavaScript.-Sprint-12?type=design&node-id=0-1&mode=design)
